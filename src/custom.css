@@ -1,0 +1,398 @@
+/**
+ * (c) DigitalOrigin
+ */
+body{margin:0; padding:0; }
+
+/*
+    Sprited Graphics
+ */
+.sg { background:url(./img/sprites.png) no-repeat; display:inline-block;
+    vertical-align: middle;  }
+.sg.logo-quebueno { width:198px; height:64px; background-position:0 0; }
+.sg.logo-quebueno-small { width:117px; height:40px; background-position:-200px 0; }
+.sg.btn-solicitar { width:146px; height:146px; background-position:0 -65px; }
+.sg.btn-back { width:40px; height:40px; background-position: -154px -66px; }
+.sg.pide-aqui { width:310px; height:185px; background-position: 35px -230px;
+    position:relative; top:-70px; z-index: -500;
+    }
+.sg.quefacil { width:148px; height:38px; background-position:0 -429px; }
+.sg.querapido { width:190px; height:38px; background-position:0 -471px; }
+.sg.onclick-gray:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+
+.clearfix:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* Colors */
+
+.qbblue { color:#29AAE2; }
+
+/* Common */
+
+.vspacer-md { display:block; height:40px; }
+.vspacer-sm { display:block; height:20px; }
+
+.noselect {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+/* Buttons */
+
+.btn-orange{
+    -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+    background: #f23d02;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #f23d02;
+    font-weight: bold;
+    display: block;
+    -moz-box-shadow: 1px 1px 3px #cccccc;
+    -webkit-box-shadow: 1px 1px 3px #cccccc;
+    box-shadow: 1px 1px 3px #cccccc;
+    text-shadow: none;
+}
+.btn-orange:hover,
+.btn-orange:visited,
+.btn-orange:active,
+.btn-orange:focus {
+    text-decoration: none;
+    color: #fff;
+    background: #f5774d;
+    text-shadow: none;
+}
+
+.btn-next {
+    width:240px;
+    padding:15px 5px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    font-size:1.6em;
+    text-decoration: none;
+    margin:0 auto;
+}
+
+.btn-next i { margin-left:10px; }
+
+/* Main */
+
+html, body { height:100%; }
+
+* {  box-sizing: border-box; -moz-box-sizing: border-box; --webkit-box-sizing: border-box; }
+
+body {
+    font-size:1em;
+    font-family: helvetica, arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wrapper, .wrapper > form {
+    height: 100% !important;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/* Common */
+
+ .main section  {
+    overflow: hidden;
+    height:100%;
+}
+
+h1 {
+    display:block !important;
+    text-align:center;
+    font-size:2em;
+    color: #333;
+}
+
+/*
+    Section 1 - Solicitar
+ */
+
+.logoplaceholder { display:inline-block; position:relative;}
+
+.scr1 h1 {
+    margin:0 auto;
+    text-indent: -5000px;
+}
+
+.scr1 header {
+    display:block;
+    margin:10% 0 5% 0;
+    text-align:center;
+    overflow:hidden;
+}
+
+.scr1 main {
+    display:block;
+    text-align: center;
+    margin:5% 0 0 0;
+}
+
+
+/*
+    Section 2 - Days
+ */
+
+.scr2 h1 {
+    margin:30px 10px 10px 10px;
+}
+
+.scr2 header {
+    display:block;
+    padding:1em;
+    width:100%;
+    background-color:#E2E2E2;
+}
+
+.scr2 header {
+    text-align: center;
+}
+
+.scr2 main {
+    display:block;
+    text-align: center;
+    margin:10%;
+}
+
+/*
+    Section 3 - Money
+ */
+
+.scr3 main, .scr3 h1  {
+    padding:0 8px;
+}
+
+.scr3 .remember-amount {
+    color:#444;
+    font-size:29px;
+    font-weight: bold;
+    padding:0;
+    text-align:center;
+    display:inline-block;
+    float:left;
+    margin-left:30px;
+}
+
+.scr3 .remember-amount>span {
+    font-size:12px;
+    display:block;
+}
+
+.scr3 header {
+    display:block;
+    padding:1em;
+    width:100%;
+    background-color:#E2E2E2;
+}
+
+.scr3 header .logo-quebueno-small {
+    float:right;
+}
+
+.scr3 main {
+    display:block;
+    text-align: center;
+    margin:10%;
+}
+
+/*
+    Section 4 - Summary / Thanks
+ */
+
+.scr4 main, .scr4 h1  {
+    padding:0 8px;
+}
+
+
+
+.scr4 header {
+    display:block;
+    padding:1em;
+    width:100%;
+    background-color:#E2E2E2;
+}
+
+.scr4 header .logo-quebueno-small {
+    float:right;
+}
+
+.scr4 main {
+    display:block;
+    text-align: center;
+    margin:10%;
+}
+
+.scr4 h1 {
+    margin-top:90px; text-align:center; background-color:#eee;
+    padding:30px 50px;
+    border-top:3px solid #ddd;
+    border-bottom:3px solid #ddd;
+}
+
+.scr4 h1>span {
+    color:#2EAADC;
+    font-weight: bold;
+}
+
+
+/*
+    Calculator common
+ */
+
+.btn.ng-click-active span {
+    color:#3E6E92;
+}
+
+
+.btn.disabled>span {
+    color:#ddd;
+}
+
+/* Disable spinner controls in Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-nbq-calc {
+    font-size:2.5em;
+    padding:8px 5px;
+    border-radius: 3px;
+    border:1px solid #ccc;
+    text-align: center;
+    margin:0 10px;
+    font-weight: bold;
+    max-width:120px;
+    vertical-align: top;
+}
+
+.small-text { color:#666; }
+
+#due-date { font-size:1em; color:#666; }
+#loan-summary { font-size:1em; color:#666; }
+
+
+/*------------------------------------*\
+    $CAROUSEL
+\*------------------------------------*/
+
+@keyframes carousel {
+    0%      { left: 0px; }
+    12.5%   { left: 0px; }
+    25%     { left:-100%; }
+    37.5%   { left:-100%; }
+    50%     { left:-200%; }
+    62.5%   { left:-200%; }
+    75%     { left:-100%; }
+    87.5%   { left:-100%; }
+    100%    { left:0px; }
+}
+
+@-webkit-keyframes carousel {
+    0%      { left: 0px; }
+    12.5%   { left: 0px; }
+    25%     { left:-100%; }
+    37.5%   { left:-100%; }
+    50%     { left:-200%; }
+    62.5%   { left:-200%; }
+    75%     { left:-100%; }
+    87.5%   { left:-100%; }
+    100%    { left:0px; }
+}
+
+.carousel{
+    overflow:hidden;
+    width:100%;
+}
+.panes{
+    list-style:none;
+    position:relative;
+    width:300%; /* Number of panes * 100% */
+    overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+
+    -moz-animation:carousel 10s infinite;
+    -webkit-animation:carousel 10s infinite;
+    animation:carousel 10s infinite;
+}
+.panes > li{
+    position:relative;
+    float:left;
+    width:33.3%; /* 100 / number of panes */
+}
+.carousel div{
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+
+.carousel div>div{
+    display:inline-block;
+    text-align: center;
+}
+
+@media (max-width: 330px) {
+    .viewport { height:60px !important; }
+    .scr1>header { margin:5px 0 15px 0 !important; padding:0 !important; }
+    header { padding:0 !important; }
+    h1 { font-size:1.6em !important; }
+    main { margin:0 !important; }
+    .vspacer-md { height:5px !important; }
+    .vspacer-sm { display:none; }
+    .scr3>header { padding:5px !important; }
+    .scr3>header { padding:5px !important; }
+}
+
+
+.ui-view-container {
+  position: relative;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform:scale3d(1, 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform:translate3d(100px, 0, 0);
+  -moz-transform:translate3d(100px, 0, 0);
+  transform:translate3d(100px, 0, 0);
+}

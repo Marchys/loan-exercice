@@ -6,6 +6,9 @@ import { createStore } from 'redux';
 import devToolsEnhancer from 'remote-redux-devtools';
 import mainReducer from './reducers';
 import './index.css';
+import './custom.css';
+import 'font-awesome/css/font-awesome.css';
+
 
 const store = createStore(mainReducer, devToolsEnhancer());
 
